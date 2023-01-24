@@ -5,7 +5,7 @@ import WhatshotOutlinedIcon from "@mui/icons-material/WhatshotOutlined";
 import { styled } from "@mui/material/styles";
 import { drawerWidth } from "./sidenav";
 import IconButton from "@mui/material/IconButton";
-import { selectSideNavOpen, switchSideNav } from "@/features/layout";
+import { selectSideNavOpen, switchSideNav } from "@/reducers/layout";
 import { useAppDispatch, useAppSelector } from "@/hooks";
 
 interface AppBarProps extends MuiAppBarProps {

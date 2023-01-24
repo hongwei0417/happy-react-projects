@@ -1,13 +1,17 @@
-import Home from '@/pages/home';
-import { useRoutes } from 'react-router-dom';
+import Home from "@/features/home";
+import { useRoutes } from "react-router-dom";
+import { featureRoutes } from "./feature-routes";
 
 export const AppRoutes = () => {
-  const routes = useRoutes([
-    {
-      path: '/',
-      element: <Home />
-    }
-  ])
+	const features = featureRoutes.flatMap((i) => i);
 
-  return routes
-}
+	const routes = useRoutes([
+		{
+			path: "/",
+			element: <Home />,
+		},
+		...features,
+	]);
+
+	return routes;
+};

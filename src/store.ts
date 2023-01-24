@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import layoutReducer from "@/features/layout";
+import layoutReducer from "@/reducers/layout";
 
 export const store = configureStore({
 	reducer: {
