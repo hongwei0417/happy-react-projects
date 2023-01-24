@@ -1,5 +1,5 @@
 import { RootState } from "@/store";
-import { createSlice } from "@reduxjs/toolkit";
+import { createSelector, createSlice } from "@reduxjs/toolkit";
 
 // Define a type for the slice state
 interface LayoutState {
@@ -25,6 +25,7 @@ export const layoutSlice = createSlice({
 export const { switchSideNav } = layoutSlice.actions;
 
 //* Selectors
-export const selectSideNavOpen = (state: RootState) => state.layout.sideNavOpen;
+export const selectLayout = (state: RootState) => state.layout;
+export const selectSideNavOpen = (state: RootState) => selectLayout(state).sideNavOpen;
 
 export default layoutSlice.reducer;

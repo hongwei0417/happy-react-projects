@@ -2,6 +2,6 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 
 const Home = () => {
-	return <div>HELLO</div>;
+	return <div>Hello</div>;
 };
 export default Home;

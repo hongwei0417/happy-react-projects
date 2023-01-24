@@ -14,6 +14,7 @@ import IconButton from "@mui/material/IconButton";
 import { CSSObject, Theme, styled, useTheme } from "@mui/material/styles";
 import { useAppDispatch, useAppSelector } from "@/hooks";
 import { selectSideNavOpen, switchSideNav } from "@/reducers/layout";
+import { featureConfigs } from "@/feature-configs";
 
 export const drawerWidth = 240;
 
@@ -81,8 +82,8 @@ const SideNav = () => {
 			</SideNavHeader>
 			<Divider />
 			<List>
-				{["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-					<ListItem key={text} disablePadding sx={{ display: "block" }}>
+				{featureConfigs.map((config, index) => (
+					<ListItem key={config.name} disablePadding sx={{ display: "block" }}>
 						<ListItemButton
 							sx={{
 								minHeight: 48,
@@ -99,7 +100,7 @@ const SideNav = () => {
 							>
 								{index % 2 === 0 ? <InboxRounded /> : <MailOutline />}
 							</ListItemIcon>
-							<ListItemText primary={text} sx={{ opacity: sideNavOpen ? 1 : 0 }} />
+							<ListItemText primary={config.title} sx={{ opacity: sideNavOpen ? 1 : 0 }} />
 						</ListItemButton>
 					</ListItem>
 				))}

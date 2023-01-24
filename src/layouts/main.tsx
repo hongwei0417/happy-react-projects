@@ -9,7 +9,6 @@ const Main = () => {
 	const { mode, setMode } = useColorScheme();
 
 	useEffect(() => {
-		console.log(mode);
 		setMode("dark");
 	}, []);
 
