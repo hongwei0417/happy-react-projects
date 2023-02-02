@@ -7,7 +7,6 @@ import SideNav, { SideNavHeader } from "@/components/sidenav";
 
 const Main = () => {
 	const { mode, setMode } = useColorScheme();
-
 	useEffect(() => {
 		setMode("dark");
 	}, []);

@@ -1,16 +1,22 @@
 import { RouteObject } from "react-router-dom";
 import { exampleRoutes } from "@/routes/example-routes";
+import { todolistRoutes } from "./routes/todolist-routes";
 
 export type FeatureConfig = {
-	name: string;
-	title: string;
-	routes: RouteObject[];
+  name: string;
+  title: string;
+  routes: RouteObject[];
 };
 
 export const featureConfigs: FeatureConfig[] = [
-	{
-		name: "example",
-		title: "Example",
-		routes: exampleRoutes,
-	},
+  {
+    name: "example",
+    title: "Example",
+    routes: exampleRoutes,
+  },
+  {
+    name: "todolist",
+    title: "TodoList",
+    routes: todolistRoutes,
+  },
 ];

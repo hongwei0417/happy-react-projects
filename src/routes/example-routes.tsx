@@ -4,18 +4,18 @@ import ExampleChild from "@/features/example/exampleChild";
 import { RouteObject } from "react-router-dom";
 
 export const exampleRoutes: RouteObject[] = [
-	{
-		path: "/example1",
-		element: <Example1 />,
-		children: [
-			{
-				path: "child",
-				element: <ExampleChild />,
-			},
-		],
-	},
-	{
-		path: "/example2",
-		element: <Example2 />,
-	},
+  {
+    path: "/example1",
+    element: <Example1 />,
+    children: [
+      {
+        path: "child",
+        element: <ExampleChild />,
+      },
+    ],
+  },
+  {
+    path: "/example2",
+    element: <Example2 />,
+  },
 ];
